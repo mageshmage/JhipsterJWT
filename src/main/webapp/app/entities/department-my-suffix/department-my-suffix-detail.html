@@ -1,0 +1,27 @@
+
+<div>
+    <h2><span data-translate="jhipsterJwtApp.department.detail.title">Department</span> {{vm.department.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="jhipsterJwtApp.department.departmentName">Department Name</span></dt>
+        <dd>
+            <span>{{vm.department.departmentName}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterJwtApp.department.location">Location</span></dt>
+        <dd>
+            <a ui-sref="location-my-suffix-detail({id:vm.department.locationId})">{{vm.department.locationId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="department-my-suffix-detail.edit({id:vm.department.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

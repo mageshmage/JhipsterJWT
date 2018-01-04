@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "categoryName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "categoryCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isEnabled",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "createdOn",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "lastUpdatedOn",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20180104111207",
+    "entityTableName": "uv_category",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix"
+}

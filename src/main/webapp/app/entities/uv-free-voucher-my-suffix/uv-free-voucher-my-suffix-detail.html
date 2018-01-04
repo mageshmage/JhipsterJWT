@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="jhipsterJwtApp.uVFreeVoucher.detail.title">UV Free Voucher</span> {{vm.uVFreeVoucher.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="jhipsterJwtApp.uVFreeVoucher.voucherCode">Voucher Code</span></dt>
+        <dd>
+            <span>{{vm.uVFreeVoucher.voucherCode}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterJwtApp.uVFreeVoucher.isValid">Is Valid</span></dt>
+        <dd>
+            <span>{{vm.uVFreeVoucher.isValid}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterJwtApp.uVFreeVoucher.isExpired">Is Expired</span></dt>
+        <dd>
+            <span>{{vm.uVFreeVoucher.isExpired}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterJwtApp.uVFreeVoucher.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.uVFreeVoucher.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterJwtApp.uVFreeVoucher.createdOn">Created On</span></dt>
+        <dd>
+            <span>{{vm.uVFreeVoucher.createdOn | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterJwtApp.uVFreeVoucher.lastUpdatedOn">Last Updated On</span></dt>
+        <dd>
+            <span>{{vm.uVFreeVoucher.lastUpdatedOn | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterJwtApp.uVFreeVoucher.brand">Brand</span></dt>
+        <dd>
+            <a ui-sref="uv-brand-my-suffix-detail({id:vm.uVFreeVoucher.brandId})">{{vm.uVFreeVoucher.brandId}}</a>
+        </dd>
+        <dt><span data-translate="jhipsterJwtApp.uVFreeVoucher.brand">Brand</span></dt>
+        <dd>
+            <a ui-sref="uv-category-my-suffix-detail({id:vm.uVFreeVoucher.brandId})">{{vm.uVFreeVoucher.brandId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="uv-free-voucher-my-suffix-detail.edit({id:vm.uVFreeVoucher.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

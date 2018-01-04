@@ -1,0 +1,79 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myUVFreeVoucherLabel" data-translate="jhipsterJwtApp.uVFreeVoucher.home.createOrEditLabel">Create or edit a UV Free Voucher</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.uVFreeVoucher.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.uVFreeVoucher.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVFreeVoucher.voucherCode" for="field_voucherCode">Voucher Code</label>
+            <input type="text" class="form-control" name="voucherCode" id="field_voucherCode"
+                    ng-model="vm.uVFreeVoucher.voucherCode"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVFreeVoucher.isValid" for="field_isValid">Is Valid</label>
+                <input type="checkbox" name="isValid" id="field_isValid"
+                          ng-model="vm.uVFreeVoucher.isValid"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVFreeVoucher.isExpired" for="field_isExpired">Is Expired</label>
+                <input type="checkbox" name="isExpired" id="field_isExpired"
+                          ng-model="vm.uVFreeVoucher.isExpired"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVFreeVoucher.createdBy" for="field_createdBy">Created By</label>
+                <input type="checkbox" name="createdBy" id="field_createdBy"
+                          ng-model="vm.uVFreeVoucher.createdBy"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVFreeVoucher.createdOn" for="field_createdOn">Created On</label>
+                <div class="input-group">
+                    <input id="field_createdOn" type="text" class="form-control" name="createdOn" uib-datepicker-popup="{{dateformat}}" ng-model="vm.uVFreeVoucher.createdOn" is-open="vm.datePickerOpenStatus.createdOn"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdOn')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVFreeVoucher.lastUpdatedOn" for="field_lastUpdatedOn">Last Updated On</label>
+                <div class="input-group">
+                    <input id="field_lastUpdatedOn" type="text" class="form-control" name="lastUpdatedOn" uib-datepicker-popup="{{dateformat}}" ng-model="vm.uVFreeVoucher.lastUpdatedOn" is-open="vm.datePickerOpenStatus.lastUpdatedOn"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastUpdatedOn')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="jhipsterJwtApp.uVFreeVoucher.brand" for="field_brand">Brand</label>
+            <select class="form-control" id="field_brand" name="brand" ng-model="vm.uVFreeVoucher.brandId" ng-options="uVBrand.id as uVBrand.id for uVBrand in vm.brands | orderBy:'id'">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="jhipsterJwtApp.uVFreeVoucher.brand" for="field_brand">Brand</label>
+            <select class="form-control" id="field_brand" name="brand" ng-model="vm.uVFreeVoucher.brandId" ng-options="uVCategory.id as uVCategory.id for uVCategory in vm.brands | orderBy:'id'">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,25 @@
+{
+    "jhipsterJwtApp": {
+        "uVCategory" : {
+            "home": {
+                "title": "UV Categories",
+                "createLabel": "UV Category-ஐ உருவாக்கு",
+                "createOrEditLabel": "UV Category -ஐ மாற்று (அ) உருவாக்கு"
+            },
+            "created": "UV Category புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "UV Category மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A UV Category நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் UV Category {{ id }}?"
+            },
+            "detail": {
+                "title": "UV Category"
+            },
+            "categoryName": "Category Name",
+            "categoryCode": "Category Code",
+            "isEnabled": "Is Enabled",
+            "createdOn": "Created On",
+            "lastUpdatedOn": "Last Updated On"
+        }
+    }
+}

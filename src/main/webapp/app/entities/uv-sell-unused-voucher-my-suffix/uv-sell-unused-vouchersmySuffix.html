@@ -1,0 +1,78 @@
+<div>
+    <h2 data-translate="jhipsterJwtApp.uVSellUnusedVoucher.home.title">UV Sell Unused Vouchers</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="uv-sell-unused-voucher-my-suffix.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="jhipsterJwtApp.uVSellUnusedVoucher.home.createLabel">
+                        Create new UV Sell Unused Voucher
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="voucherCode"><span data-translate="jhipsterJwtApp.uVSellUnusedVoucher.voucherCode">Voucher Code</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="isValid"><span data-translate="jhipsterJwtApp.uVSellUnusedVoucher.isValid">Is Valid</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="isExpired"><span data-translate="jhipsterJwtApp.uVSellUnusedVoucher.isExpired">Is Expired</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdBy"><span data-translate="jhipsterJwtApp.uVSellUnusedVoucher.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdOn"><span data-translate="jhipsterJwtApp.uVSellUnusedVoucher.createdOn">Created On</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastUpdatedOn"><span data-translate="jhipsterJwtApp.uVSellUnusedVoucher.lastUpdatedOn">Last Updated On</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="brandId"><span data-translate="jhipsterJwtApp.uVSellUnusedVoucher.brand">Brand</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="brandId"><span data-translate="jhipsterJwtApp.uVSellUnusedVoucher.brand">Brand</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="uVSellUnusedVoucher in vm.uVSellUnusedVouchers track by uVSellUnusedVoucher.id">
+                    <td><a ui-sref="uv-sell-unused-voucher-my-suffix-detail({id:uVSellUnusedVoucher.id})">{{uVSellUnusedVoucher.id}}</a></td>
+                    <td>{{uVSellUnusedVoucher.voucherCode}}</td>
+                    <td>{{uVSellUnusedVoucher.isValid}}</td>
+                    <td>{{uVSellUnusedVoucher.isExpired}}</td>
+                    <td>{{uVSellUnusedVoucher.createdBy}}</td>
+                        <td>{{uVSellUnusedVoucher.createdOn | date:'mediumDate'}}</td>
+                        <td>{{uVSellUnusedVoucher.lastUpdatedOn | date:'mediumDate'}}</td>
+                    <td>
+                        <a ui-sref="uv-brand-my-suffix-detail({id:uVSellUnusedVoucher.brandId})">{{uVSellUnusedVoucher.brandId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="uv-category-my-suffix-detail({id:uVSellUnusedVoucher.brandId})">{{uVSellUnusedVoucher.brandId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="uv-sell-unused-voucher-my-suffix-detail({id:uVSellUnusedVoucher.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="uv-sell-unused-voucher-my-suffix.edit({id:uVSellUnusedVoucher.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="uv-sell-unused-voucher-my-suffix.delete({id:uVSellUnusedVoucher.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

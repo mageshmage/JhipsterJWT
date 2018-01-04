@@ -1,0 +1,22 @@
+{
+    "jhipsterJwtApp": {
+        "uVBrand" : {
+            "home": {
+                "title": "UV Brands",
+                "createLabel": "Create a new UV Brand",
+                "createOrEditLabel": "Create or edit a UV Brand"
+            },
+            "created": "A new UV Brand is created with identifier {{ param }}",
+            "updated": "A UV Brand is updated with identifier {{ param }}",
+            "deleted": "A UV Brand is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete UV Brand {{ id }}?"
+            },
+            "detail": {
+                "title": "UV Brand"
+            },
+            "brandName": "Brand Name",
+            "brandCode": "Brand Code"
+        }
+    }
+}

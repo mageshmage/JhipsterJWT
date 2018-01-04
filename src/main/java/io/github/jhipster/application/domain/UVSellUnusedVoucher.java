@@ -47,7 +47,7 @@ public class UVSellUnusedVoucher implements Serializable {
 
     @OneToOne
     @JoinColumn(unique = true)
-    private UVCategory brand;
+    private UVCategory category;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -149,17 +149,17 @@ public class UVSellUnusedVoucher implements Serializable {
         this.brand = uVBrand;
     }
 
-    public UVCategory getBrand() {
-        return brand;
+    public UVCategory getCategory() {
+        return category;
     }
 
-    public UVSellUnusedVoucher brand(UVCategory uVCategory) {
-        this.brand = uVCategory;
+    public UVSellUnusedVoucher category(UVCategory uVCategory) {
+        this.category = uVCategory;
         return this;
     }
 
-    public void setBrand(UVCategory uVCategory) {
-        this.brand = uVCategory;
+    public void setCategory(UVCategory uVCategory) {
+        this.category = uVCategory;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

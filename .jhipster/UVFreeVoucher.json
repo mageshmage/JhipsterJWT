@@ -11,7 +11,7 @@
         },
         {
             "relationshipType": "one-to-one",
-            "relationshipName": "brand",
+            "relationshipName": "category",
             "otherEntityName": "uVCategory",
             "otherEntityField": "id",
             "ownerSide": true,

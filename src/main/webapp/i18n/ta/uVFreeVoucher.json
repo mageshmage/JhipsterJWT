@@ -22,7 +22,7 @@
             "createdOn": "Created On",
             "lastUpdatedOn": "Last Updated On",
             "brand": "Brand",
-            "brand": "Brand"
+            "category": "Category"
         }
     }
 }

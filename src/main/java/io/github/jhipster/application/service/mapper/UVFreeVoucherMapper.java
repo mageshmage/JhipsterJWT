@@ -12,11 +12,11 @@ import org.mapstruct.*;
 public interface UVFreeVoucherMapper extends EntityMapper<UVFreeVoucherDTO, UVFreeVoucher> {
 
     @Mapping(source = "brand.id", target = "brandId")
-    @Mapping(source = "brand.id", target = "brandId")
+    @Mapping(source = "category.id", target = "categoryId")
     UVFreeVoucherDTO toDto(UVFreeVoucher uVFreeVoucher); 
 
     @Mapping(source = "brandId", target = "brand")
-    @Mapping(source = "brandId", target = "brand")
+    @Mapping(source = "categoryId", target = "category")
     UVFreeVoucher toEntity(UVFreeVoucherDTO uVFreeVoucherDTO);
 
     default UVFreeVoucher fromId(Long id) {

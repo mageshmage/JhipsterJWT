@@ -14,9 +14,9 @@
                                  referencedColumnNames="id"
                                  referencedTableName="uv_brand"/>
 
-        <addForeignKeyConstraint baseColumnNames="brand_id"
+        <addForeignKeyConstraint baseColumnNames="category_id"
                                  baseTableName="uv_free_voucher"
-                                 constraintName="fk_uvfree_voucher_brand_id"
+                                 constraintName="fk_uvfree_voucher_category_id"
                                  referencedColumnNames="id"
                                  referencedTableName="uv_category"/>
 

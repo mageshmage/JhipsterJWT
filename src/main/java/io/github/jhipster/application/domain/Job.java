@@ -36,7 +36,7 @@ public class Job implements Serializable {
     @ManyToOne
     private Employee employee;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     @JoinTable(name = "job_task",
                joinColumns = @JoinColumn(name="jobs_id", referencedColumnName="id"),

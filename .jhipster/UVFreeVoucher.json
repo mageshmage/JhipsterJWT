@@ -1,0 +1,54 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "brand",
+            "otherEntityName": "uVBrand",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "uVFreeVoucher"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "brand",
+            "otherEntityName": "uVCategory",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "uVFreeVoucher"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "voucherCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isValid",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isExpired",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "createdOn",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "lastUpdatedOn",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20180104111108",
+    "entityTableName": "uv_free_voucher",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix"
+}

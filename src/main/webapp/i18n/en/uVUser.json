@@ -1,0 +1,24 @@
+{
+    "jhipsterJwtApp": {
+        "uVUser" : {
+            "home": {
+                "title": "UV Users",
+                "createLabel": "Create a new UV User",
+                "createOrEditLabel": "Create or edit a UV User"
+            },
+            "created": "A new UV User is created with identifier {{ param }}",
+            "updated": "A UV User is updated with identifier {{ param }}",
+            "deleted": "A UV User is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete UV User {{ id }}?"
+            },
+            "detail": {
+                "title": "UV User"
+            },
+            "userName": "User Name",
+            "password": "Password",
+            "email": "Email",
+            "isVerifiedUser": "Is Verified User"
+        }
+    }
+}

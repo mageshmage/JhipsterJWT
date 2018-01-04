@@ -24,14 +24,14 @@
         }).then(function(brand) {
             vm.brands.push(brand);
         });
-        vm.brands = UVCategory.query({filter: 'uvsellunusedvoucher-is-null'});
-        $q.all([vm.uVSellUnusedVoucher.$promise, vm.brands.$promise]).then(function() {
-            if (!vm.uVSellUnusedVoucher.brandId) {
+        vm.categories = UVCategory.query({filter: 'uvsellunusedvoucher-is-null'});
+        $q.all([vm.uVSellUnusedVoucher.$promise, vm.categories.$promise]).then(function() {
+            if (!vm.uVSellUnusedVoucher.categoryId) {
                 return $q.reject();
             }
-            return UVCategory.get({id : vm.uVSellUnusedVoucher.brandId}).$promise;
-        }).then(function(brand) {
-            vm.brands.push(brand);
+            return UVCategory.get({id : vm.uVSellUnusedVoucher.categoryId}).$promise;
+        }).then(function(category) {
+            vm.categories.push(category);
         });
 
         $timeout(function (){

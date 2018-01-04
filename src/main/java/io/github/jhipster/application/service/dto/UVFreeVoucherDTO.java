@@ -28,7 +28,7 @@ public class UVFreeVoucherDTO implements Serializable {
 
     private Long brandId;
 
-    private Long brandId;
+    private Long categoryId;
 
     public Long getId() {
         return id;
@@ -94,12 +94,12 @@ public class UVFreeVoucherDTO implements Serializable {
         this.brandId = uVBrandId;
     }
 
-    public Long getBrandId() {
-        return brandId;
+    public Long getCategoryId() {
+        return categoryId;
     }
 
-    public void setBrandId(Long uVCategoryId) {
-        this.brandId = uVCategoryId;
+    public void setCategoryId(Long uVCategoryId) {
+        this.categoryId = uVCategoryId;
     }
 
     @Override

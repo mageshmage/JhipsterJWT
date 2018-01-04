@@ -12,11 +12,11 @@ import org.mapstruct.*;
 public interface UVSellUnusedVoucherMapper extends EntityMapper<UVSellUnusedVoucherDTO, UVSellUnusedVoucher> {
 
     @Mapping(source = "brand.id", target = "brandId")
-    @Mapping(source = "brand.id", target = "brandId")
+    @Mapping(source = "category.id", target = "categoryId")
     UVSellUnusedVoucherDTO toDto(UVSellUnusedVoucher uVSellUnusedVoucher); 
 
     @Mapping(source = "brandId", target = "brand")
-    @Mapping(source = "brandId", target = "brand")
+    @Mapping(source = "categoryId", target = "category")
     UVSellUnusedVoucher toEntity(UVSellUnusedVoucherDTO uVSellUnusedVoucherDTO);
 
     default UVSellUnusedVoucher fromId(Long id) {

@@ -1,0 +1,49 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myUVUserLabel" data-translate="jhipsterJwtApp.uVUser.home.createOrEditLabel">Create or edit a UV User</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.uVUser.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.uVUser.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVUser.userName" for="field_userName">User Name</label>
+            <input type="text" class="form-control" name="userName" id="field_userName"
+                    ng-model="vm.uVUser.userName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVUser.password" for="field_password">Password</label>
+            <input type="text" class="form-control" name="password" id="field_password"
+                    ng-model="vm.uVUser.password"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVUser.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.uVUser.email"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVUser.isVerifiedUser" for="field_isVerifiedUser">Is Verified User</label>
+                <input type="checkbox" name="isVerifiedUser" id="field_isVerifiedUser"
+                          ng-model="vm.uVUser.isVerifiedUser"/>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

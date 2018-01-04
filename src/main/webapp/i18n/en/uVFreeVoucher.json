@@ -1,0 +1,28 @@
+{
+    "jhipsterJwtApp": {
+        "uVFreeVoucher" : {
+            "home": {
+                "title": "UV Free Vouchers",
+                "createLabel": "Create a new UV Free Voucher",
+                "createOrEditLabel": "Create or edit a UV Free Voucher"
+            },
+            "created": "A new UV Free Voucher is created with identifier {{ param }}",
+            "updated": "A UV Free Voucher is updated with identifier {{ param }}",
+            "deleted": "A UV Free Voucher is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete UV Free Voucher {{ id }}?"
+            },
+            "detail": {
+                "title": "UV Free Voucher"
+            },
+            "voucherCode": "Voucher Code",
+            "isValid": "Is Valid",
+            "isExpired": "Is Expired",
+            "createdBy": "Created By",
+            "createdOn": "Created On",
+            "lastUpdatedOn": "Last Updated On",
+            "brand": "Brand",
+            "brand": "Brand"
+        }
+    }
+}

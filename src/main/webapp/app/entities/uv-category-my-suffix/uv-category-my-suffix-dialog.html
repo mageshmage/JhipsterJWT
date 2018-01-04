@@ -1,0 +1,63 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myUVCategoryLabel" data-translate="jhipsterJwtApp.uVCategory.home.createOrEditLabel">Create or edit a UV Category</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.uVCategory.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.uVCategory.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVCategory.categoryName" for="field_categoryName">Category Name</label>
+            <input type="text" class="form-control" name="categoryName" id="field_categoryName"
+                    ng-model="vm.uVCategory.categoryName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVCategory.categoryCode" for="field_categoryCode">Category Code</label>
+            <input type="text" class="form-control" name="categoryCode" id="field_categoryCode"
+                    ng-model="vm.uVCategory.categoryCode"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVCategory.isEnabled" for="field_isEnabled">Is Enabled</label>
+                <input type="checkbox" name="isEnabled" id="field_isEnabled"
+                          ng-model="vm.uVCategory.isEnabled"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVCategory.createdOn" for="field_createdOn">Created On</label>
+                <div class="input-group">
+                    <input id="field_createdOn" type="text" class="form-control" name="createdOn" uib-datepicker-popup="{{dateformat}}" ng-model="vm.uVCategory.createdOn" is-open="vm.datePickerOpenStatus.createdOn"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdOn')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterJwtApp.uVCategory.lastUpdatedOn" for="field_lastUpdatedOn">Last Updated On</label>
+                <div class="input-group">
+                    <input id="field_lastUpdatedOn" type="text" class="form-control" name="lastUpdatedOn" uib-datepicker-popup="{{dateformat}}" ng-model="vm.uVCategory.lastUpdatedOn" is-open="vm.datePickerOpenStatus.lastUpdatedOn"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastUpdatedOn')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

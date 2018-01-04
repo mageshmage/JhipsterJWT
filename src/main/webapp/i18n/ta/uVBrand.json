@@ -1,0 +1,22 @@
+{
+    "jhipsterJwtApp": {
+        "uVBrand" : {
+            "home": {
+                "title": "UV Brands",
+                "createLabel": "UV Brand-ஐ உருவாக்கு",
+                "createOrEditLabel": "UV Brand -ஐ மாற்று (அ) உருவாக்கு"
+            },
+            "created": "UV Brand புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "UV Brand மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A UV Brand நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் UV Brand {{ id }}?"
+            },
+            "detail": {
+                "title": "UV Brand"
+            },
+            "brandName": "Brand Name",
+            "brandCode": "Brand Code"
+        }
+    }
+}

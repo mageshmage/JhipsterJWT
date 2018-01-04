@@ -42,7 +42,7 @@ relationship OneToOne {
 }
 
 relationship OneToOne {
-	UVSellUnusedVoucher{brand} to UVCategory
+	UVSellUnusedVoucher{category} to UVCategory
 }
 
 relationship OneToOne {
@@ -50,7 +50,7 @@ relationship OneToOne {
 }
 
 relationship OneToOne {
-	UVFreeVoucher{brand} to UVCategory
+	UVFreeVoucher{category} to UVCategory
 }
 
 paginate UVSellUnusedVoucher with pagination

@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="jhipsterJwtApp.uVCategory.detail.title">UV Category</span> {{vm.uVCategory.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="jhipsterJwtApp.uVCategory.categoryName">Category Name</span></dt>
+        <dd>
+            <span>{{vm.uVCategory.categoryName}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterJwtApp.uVCategory.categoryCode">Category Code</span></dt>
+        <dd>
+            <span>{{vm.uVCategory.categoryCode}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterJwtApp.uVCategory.isEnabled">Is Enabled</span></dt>
+        <dd>
+            <span>{{vm.uVCategory.isEnabled}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterJwtApp.uVCategory.createdOn">Created On</span></dt>
+        <dd>
+            <span>{{vm.uVCategory.createdOn | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterJwtApp.uVCategory.lastUpdatedOn">Last Updated On</span></dt>
+        <dd>
+            <span>{{vm.uVCategory.lastUpdatedOn | date:'mediumDate'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="uv-category-my-suffix-detail.edit({id:vm.uVCategory.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

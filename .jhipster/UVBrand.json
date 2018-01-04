@@ -1,0 +1,21 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "brandName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "brandCode",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180104111107",
+    "entityTableName": "uv_brand",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix"
+}
